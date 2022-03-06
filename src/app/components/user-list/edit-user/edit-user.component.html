@@ -1,0 +1,42 @@
+<mat-card class="mat-card-flat">
+    <mat-card-title>Edit User</mat-card-title>
+    <mat-card-content class="user-form-content">
+        <div fxLayoutAlign="center center">
+            <form [formGroup]="userEditForm" (ngSubmit) = "onSubmit()" *ngIf="userEditForm">
+                <div class="form-field-container" fxLayout="columns">
+                    <mat-form-field>
+                        <label for="first-name">First Name: </label>
+                        <input matInput id="first-name" type="text" formControlName="first_name" placeholder="First Name">
+                    </mat-form-field>
+                    <div *ngIf="userEditForm.controls['first_name'].invalid && (userEditForm.controls['first_name'].dirty || userEditForm.controls['first_name'].touched)" class="alert">
+                        <div *ngIf="userEditForm.controls['first_name']?.errors">
+                        Please enter username
+                      </div>
+                    </div>
+                    <mat-form-field>
+                        <label for="last-name">Last Name: </label>
+                        <input matInput id="last-name" type="text" formControlName="last_name">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label for="username">Username: </label>
+                        <input matInput id="username" type="text" formControlName="username">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label for="email">Email: </label>
+                        <input matInput id="email" type="text" formControlName="email">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Status</mat-label>
+                        <mat-select formControlName="status">
+                          <mat-option *ngFor="let status of selectStatuses" [value]=status.value>{{status.title}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <mat-card-actions>
+                            <button class="primary" mat-raised-button type="submit" [disabled] = '!userEditForm.valid'>Save</button>
+                      </mat-card-actions>
+                </div>
+                
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>

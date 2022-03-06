@@ -1,0 +1,16 @@
+
+.user-list-table {
+    width: 100%;
+    thead, tbody {
+        width: 100%;  
+    }
+}
+.filter-user-form-container {
+    min-width: 100%;
+    form {
+        min-width: 100%;
+        mat-form-field {
+            margin: 0 20px 0 20px
+        }
+    }
+}

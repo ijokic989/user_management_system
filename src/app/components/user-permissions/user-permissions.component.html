@@ -1,0 +1,40 @@
+<mat-card *ngIf="!userPermissions.length"><mat-card-content>There are currently no permissions assigned to this user</mat-card-content></mat-card>
+<mat-card class="mat-card-flat">
+	<mat-card-title>Assign Permission</mat-card-title>
+	<mat-card-content>
+			<mat-accordion>
+					<div *ngIf="userPermissions">
+							<mat-expansion-panel *ngFor="let permission of userPermissions">
+									<mat-expansion-panel-header>
+									<mat-panel-title>
+											{{permission.title}}
+									</mat-panel-title>
+									<div class="remove-btn-container">
+										<button mat-icon-button color="warn" (click) = "removeUserPermission(permission.code)">
+											<mat-icon class="mat-18">delete</mat-icon>
+											Remove
+										</button>
+									  </div>
+
+									</mat-expansion-panel-header>
+							{{permission.description}}
+						</mat-expansion-panel>
+					</div>
+			</mat-accordion>
+			<div class="permissions-form-container">
+				<form [formGroup]="userPermissionsForm" (ngSubmit) = "savePermissions()" *ngIf="userPermissionsForm">
+					<mat-form-field appearance="fill">
+							<mat-label>Select Permissions</mat-label>
+							<mat-select formControlName="permissionsListControl" multiple>
+							<mat-option *ngFor="let permission of permissions"  [value]="permission.code" matTooltip="permission.description">
+								{{permission.title}}
+							</mat-option>
+							</mat-select>
+					</mat-form-field>
+					<mat-card-actions>
+						<button mat-raised-button color="primary" type="submit" [disabled] = "!userPermissionsForm.valid">Save Permissions</button>
+					</mat-card-actions>	
+				</form>
+			</div>
+	</mat-card-content>
+</mat-card>

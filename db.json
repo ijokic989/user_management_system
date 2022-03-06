@@ -1,0 +1,154 @@
+{
+  "users": [
+    {
+      "first_name": "Peter",
+      "last_name": "Parker",
+      "username": "peter23456",
+      "password": "peter123",
+      "email": "peter@mail.com",
+      "status": "active",
+      "id": 15,
+      "permissions": [
+        "add_user",
+        "edit_user",
+        "delete_user",
+        "view_users",
+        "access_content"
+      ]
+    },
+    {
+      "first_name": "Beka",
+      "last_name": "Johns",
+      "username": "beck23",
+      "password": "beck23",
+      "email": "beck23@mail.com",
+      "status": "active",
+      "id": 16
+    },
+    {
+      "first_name": "Milton",
+      "last_name": "Brown",
+      "username": "mbrown",
+      "password": "mbrown23",
+      "email": "mbrown@mail.com",
+      "status": "active",
+      "id": 18,
+      "permissions": [
+        "add_user",
+        "edit_user",
+        "delete_user",
+        "view_users",
+        "access_content"
+      ]
+    },
+    {
+      "first_name": "Inez",
+      "last_name": "Torres",
+      "username": "Torres23",
+      "password": "Torres123",
+      "email": "torres@mail.com",
+      "status": "active",
+      "id": 19
+    },
+    {
+      "first_name": "George2",
+      "last_name": "wqe",
+      "username": "qweqwe",
+      "password": "wqeqwe",
+      "email": "george123@mail.com",
+      "status": "active",
+      "id": 20,
+      "permissions": [
+        "add_user",
+        "edit_user",
+        "delete_user"
+      ]
+    },
+    {
+      "first_name": "Julie",
+      "last_name": "Rodriguez",
+      "username": "julie223",
+      "password": "julie223",
+      "email": "julie223@mail.com",
+      "status": "active",
+      "id": 21
+    },
+    {
+      "first_name": "Malak",
+      "last_name": "Watkins",
+      "username": "malak2",
+      "password": "malak2",
+      "email": "malak2@mail.com",
+      "status": "active",
+      "id": 22
+    },
+    {
+      "first_name": "Juniper",
+      "last_name": "Stanton",
+      "username": "Juniper32",
+      "password": "Juniper32",
+      "email": "juniper32@mail.com",
+      "status": "active",
+      "id": 23
+    },
+    {
+      "first_name": "Ellesha",
+      "last_name": "Hood",
+      "username": "Ellesha32",
+      "password": "Ellesha32",
+      "email": "ellesha32@mail.com",
+      "status": "active",
+      "id": 24
+    },
+    {
+      "first_name": "Onur",
+      "last_name": "Bull",
+      "username": "Onur32",
+      "password": "Onur32",
+      "email": "onur32@mail.com",
+      "status": "blocked",
+      "id": 25
+    },
+    {
+      "first_name": "Tai",
+      "last_name": "Dalby",
+      "username": "tai23",
+      "password": "tai23",
+      "email": "tai23@mail.com",
+      "status": "active",
+      "id": 26,
+      "permissions": [
+        "add_user",
+        "edit_user",
+        "delete_user"
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "code": "add_user",
+      "title": "Add User",
+      "description": "Permission to create new users"
+    },
+    {
+      "code": "edit_user",
+      "title": "Edit User",
+      "description": "Permission to edit existing users"
+    },
+    {
+      "code": "delete_user",
+      "title": "Delete User",
+      "description": "Permission to edit delete users"
+    },
+    {
+      "code": "view_users",
+      "title": "View User",
+      "description": "Permission to access user overview or user view page"
+    },
+    {
+      "code": "access_content",
+      "title": "Access Content",
+      "description": "Permission to access content"
+    }
+  ]
+}
